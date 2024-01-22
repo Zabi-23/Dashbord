@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Background</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="navbar-box" id="datetimeBox"></div>
+        </div>
+    </header>
+    <span>
+        <h1 id="dashboard-title" onclick="editTitle()">John Doe Dashbord</h1>
+    </span>
+
+    <main>
+        <div class="container">
+
+
+            <!-- Snabblänkar -->
+            <div class="box" id="box1">
+                <h4>Snabblänker</h4>
+                <input type="text" id="linkInput" placeholder="add Link">
+                <!--  <button id="showLinkBtn">Show Link</button> -->
+                <div id="linkContainer"></div>
+                <button id="removeLastLinkBtn">Remove Link</button>
+            </div>
+
+
+            <!-- Dagens väder -->
+            <div class="box" id="box2">
+                <h4>Dagens väder</h4>
+                <form id="cityForm">
+                    <div id="weatherInfo"></div>
+                    <div id="cityNameElement"></div>
+                    <input type="text" id="cityInput" placeholder="Enter City name" />
+                </form>
+
+            </div>
+            <!-- Lägg till en klass för vädersymbolen -->
+
+
+
+            <!-- Övriga boxar -->
+            <div class="box" id="box3">
+                <h4>Radiokanaler</h4>
+                <div id="circle" class="circle"> Sverig Radio</div>
+
+                <!-- Stop-knapp med SVG-ikon -->
+                <button id="stopButton">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="6" y="6" width="12" height="12" />
+                    </svg>
+                </button>
+
+                <!-- Play-knapp med SVG-ikon -->
+                <button id="playButton">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="5 3 19 12 5 21 5 3" />
+                    </svg>
+                </button>
+
+                <!-- Next-knapp med SVG-ikon -->
+                <button id="nextButton">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="5 4 15 12 5 20 5 4" />
+                        <polygon points="17 4 22 12 17 20 17 4" />
+                    </svg>
+
+                </button>
+
+                <div id="channels-container"></div>
+            </div>
+
+
+
+            <div class="box" id="box4">
+                <span>
+                    <h4>Anteckningar</h4>
+                </span>
+                <div class="inner-box" contenteditable="true" oninput="saveNotes()"></div>
+                <button class="save-btn" onclick="manualSave()">Spara</button>
+                <button class="view-notes-btn" onclick="viewNotes()"> Visa </button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <label for="backgroundInput"></label>
+            <input type="text" id="backgroundInput" placeholder="Enter background query">
+            <button id="changeBackgroundBtn">Change Background</button>
+        </div>
+
+        <div id="weatherInfo"></div>
+        <div id="cityNameElement"></div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+
+        <script src="main.js" defer></script>
+    </footer>
+</body>
+
+</html>

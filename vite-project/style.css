@@ -1,0 +1,370 @@
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* cursor: pointer; */
+}
+
+html {
+    height: 100%;
+    background-image: url(); /* Du kanske vill lägga till en bild-URL här */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#dashboard-title {
+    font-size: 2em;
+    max-width: 100%;
+    color: #dfdee6; /* Set the color for the title */
+    cursor: pointer;
+}
+
+.clock-container {
+    padding: 40px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    font-size: 2rem;
+    width: 350px;
+    height: auto;
+}
+
+.navbar {
+    background-color: transparent;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: -250px;
+    margin-bottom: 40px;
+}
+
+/* Ny stil för Navbar Box */
+.navbar-box {
+    width: 400px;
+    height: 45px;
+    background-color: rgba(210, 202, 202, 0.7);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 2rem;
+    
+}
+
+h1 {
+    margin: 0px 640px;
+    padding-top: 200px;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    color: #dedde5;
+
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 150px;
+}
+
+.box {
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+    border-radius: 18px;
+    background-color: rgba(236, 227, 227, 0.899);
+    border: 1px solid #333;
+    
+}
+
+#box1 {
+    display: grid;
+    grid-template-rows: repeat(5, 60px);
+    grid-gap: 0px;
+    cursor: pointer;
+}
+#linkInput{
+    margin-top: 310px;
+    margin-left: 10px;
+    border-radius: 10px;
+}
+#removeLastLinkBtn{
+    width: 100px;
+    height: 25px;
+    border-radius:10px ;
+    margin-left: 115px;
+    margin-top: 190px;
+}
+
+#box1 h4 {
+    line-height: 60px;
+    margin: 0;
+    margin-left: 90px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+/* Your existing styles */
+
+.linkWithLogo a {
+    margin-top: -200px; 
+    margin-left: 15px;
+
+}
+
+/* Additional styles, if any */
+
+
+
+
+#box2 {
+    display: grid;
+    grid-template-rows: repeat(4, 60px);
+    grid-gap: 0px;
+}
+
+#box2 h4 {
+    line-height: 60px;
+    margin: 0;
+    margin-left: 75px;
+    padding-bottom: 10px;
+    
+}
+#box2 h3{
+    margin-left: 10px;
+}
+
+#box2 temperature-text{
+    margin-left: 70px;
+}
+
+.temperature-text {
+    margin-left: 30px; 
+}
+
+
+#cityInput {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+
+}
+
+#cityInput::placeholder {
+    color: #999;
+    font-style: italic;
+    cursor: pointer;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    width: 100px;
+    height: 20px;
+    cursor: pointer;
+}
+/* Lägg till en klass för vädersymbolen */
+.colored-icon {
+    filter: invert(76%) sepia(15%) saturate(1857%) hue-rotate(191deg) brightness(91%) contrast(91%);
+    
+}  
+
+/* Placera knapparna bredvid varandra */
+.save-btn, .view-notes-btn {
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.weather-icon {
+    filter: invert(1); /* Invertera färgerna för att anpassa sig till bakgrundsbilden */
+    margin-left: 20px;
+}
+
+#box3 .circle {
+    width: 200px;
+    height: 200px;
+    
+    border-radius: 50%;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 200px;
+    font-size: 20px;
+    background-color: rgba(216, 65, 65, 0.7);
+    cursor: pointer;
+}
+
+#box3 h4 {
+    line-height: 60px;
+    margin: 0;
+    margin-left: 90px;
+    padding: 0;
+    display: inline;
+    cursor: pointer;
+
+}
+
+
+
+
+#box4 h4 {
+    line-height: 60px;
+    margin: 0;
+    margin-left: 10px;
+    padding: 0;
+    display: inline; /* Set display to inline */
+    cursor: pointer;
+}
+
+#box4 .inner-box {
+    width: 85%;
+    height: 70%;
+    border: 1px solid #333;
+    background-color: rgba(243, 238, 238, 0.5);
+    border-radius: 18px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: auto;
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+/* ... annan CSS-kod ... */
+
+#box4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    cursor: pointer;
+
+}
+.inner-box {
+    text-align: left;
+    padding: 10px; 
+  }
+  
+
+
+.save-btn, .view-notes-btn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save-btn {
+    background-color: #4caf50;
+    color: white;
+    margin-right: 5px; /* Lägger till marginal till höger för att separera knapparna */
+    cursor: pointer;
+}
+#nextButton,
+#playButton,
+#stopButton {
+ cursor: pointer;
+}
+
+#backgroundInput{
+    border-radius: 15px;
+}
+#changeBackgroundBtn{
+    border-radius: 15px;
+    width: auto;
+    height: 25px;
+}
+
+
+.view-notes-btn {
+    background-color: #24ab51;
+    color: white;
+    cursor: pointer;
+}
+  
+  .modal li {
+    margin-bottom: 10px;
+  }
+
+  
+  
+@media (max-width: 1200px) {
+    .box {
+        width: 48%;
+    }
+    #dashboard-title {
+        font-size: 2em;
+        max-width: 100%;
+        color: #e1dfeb; /* Set the color for the title */
+    }
+}
+
+@media (max-width: 768px) {
+    .box {
+        width: 100%;
+    }
+    #dashboard-title {
+        font-size: 1em;
+        max-width: 100%;
+        color: #cbc9db; /* Set the color for the title */
+    }
+}
+
+@media (max-width: 480px) {
+    .container,
+    .box {
+        width: 100%;
+    }
+    #dashboard-title {
+        font-size: 16px;
+        max-width: 100%;
+        color: #cccbd4; /* Set the color for the title */
+    }
+    
+}
+#dashboard-title {
+    font-size: 2em;
+    max-width: 100%;
+    color: #bfbcd2; /* Set the color for the title */
+    margin: 10px; /* Add some margin to improve spacing */
+    text-align: center; /* Center the text */
+}
+
+@media (max-width: 768px) {
+    #dashboard-title {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #dashboard-title {
+        font-size: 1.2em; /* Further adjust font size for smaller screens */
+    }
+}
