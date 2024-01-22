@@ -35,6 +35,8 @@ function updateDateTime() {
   });
   
   // Funktion för att lägga till länkar
+
+
   document.addEventListener("DOMContentLoaded", () => {
     const linkInput = document.getElementById("linkInput");
     const linkContainer = document.getElementById("linkContainer");
@@ -49,38 +51,33 @@ function updateDateTime() {
         addLink();
       }
     }
-
-    async function addLink() {
+  
+    function addLink() {
       const link = linkInput.value.trim();
       if (link !== '') {
-        const linkElement = await createLinkWithLogo(link);
-        if (linkElement) { 
-          linkContainer.appendChild(linkElement);
-          addedLinks.push(link);
-          saveLinksToLocalStorage(addedLinks);
-        }
-
-        resetLinkInput(linkInput);
+        createLinkElement(link).then(linkElement => {
+          if (linkElement) {
+            linkContainer.appendChild(linkElement);
+            addedLinks.push(link);
+            saveLinksToLocalStorage(addedLinks);
+            resetLinkInput(linkInput);
+          }
+        });
       }
     }
   
-    async function createLinkWithLogo(link) {
+    async function createLinkElement(link) {
       const linkElement = document.createElement('div');
       linkElement.classList.add('linkWithLogo');
   
-      try {
-        const linkText = document.createElement('a');
-        linkText.href = link;
-        linkText.target = "_blank";
-        linkText.textContent = link;
+      const linkText = document.createElement('a');
+      linkText.href = link;
+      linkText.target = "_blank";
+      linkText.textContent = link;
   
-        linkElement.appendChild(linkText);
+      linkElement.appendChild(linkText);
   
-        return linkElement;
-      } catch (error) {
-        console.error('Error creating link with logo:', error);
-      }
-      return null;
+      return linkElement;
     }
   
     function resetLinkInput(input) {
@@ -89,10 +86,7 @@ function updateDateTime() {
   
     function removeLastLink() {
       if (addedLinks.length > 0) {
-       
         removeLastLinkElement();
-        
-       
         addedLinks.pop();
         saveLinksToLocalStorage(addedLinks);
       }
@@ -104,18 +98,20 @@ function updateDateTime() {
         lastLinkElement.remove();
       }
     }
+  
     addedLinks.forEach(link => {
-      createLinkWithLogo(link).then(linkElement => {
+      createLinkElement(link).then(linkElement => {
         if (linkElement) {
           linkContainer.appendChild(linkElement);
         }
       });
     });
-   
+  
     function loadLinksFromLocalStorage() {
       const savedLinks = localStorage.getItem('addedLinks');
       return savedLinks ? JSON.parse(savedLinks) : [];
-    } 
+    }
+  
     function saveLinksToLocalStorage(links) {
       localStorage.setItem('addedLinks', JSON.stringify(links));
     }
@@ -124,7 +120,7 @@ function updateDateTime() {
   
   
   // Funktion för bakgrundsbild
-  const UNSPLASH_API_KEY = "7R0aFkI7rzvnyK35200gEzvas3mP6dMzYq9uiAqsYoc";
+  const UNSPLASH_API_KEY = ""; //här måste skrivas api key för background dilden
   const changeBackgroundBtn = document.getElementById("changeBackgroundBtn");
   
   changeBackgroundBtn.addEventListener("click", () => {
@@ -149,7 +145,7 @@ function updateDateTime() {
 
 
   // Funktion för väder
-  const apiKey = 'e6e79e8c5c4df108bf63ca3a99fad56f';
+  const apiKey = ''; //har måste skrivas api key för väder
   const weatherInfoElement = document.getElementById('weatherInfo');
   const cityNameElement = document.getElementById('cityNameElement');
   let cityNameDisplayed = false;
@@ -241,7 +237,7 @@ function updateDateTime() {
       });
     }
   
-    function updateCurrentChannel() {
+     function updateCurrentChannel() {
       const currentChannel = data.channels[currentChannelIndex];
       const channelId = currentChannel.id;
   
@@ -252,7 +248,7 @@ function updateDateTime() {
         // Om det inte finns någon logotyp, använd en standardbakgrundsbild
         circle.style.backgroundImage = 'url("path/to/default-image.jpg")'; // Byt ut sökvägen efter behov
       }
-    }
+    } 
   
     function playCurrentChannel() {
       const channelId = data.channels[currentChannelIndex].id;

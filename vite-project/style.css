@@ -14,11 +14,17 @@ body {
     background-repeat: no-repeat;
     /* cursor: pointer; */
 }
+/* body {
+    background-image: url("path/to/default-image.jpg");
+}
+body {
+    background-image: url("./default-image.jpg");
+} */
+
 
 html {
     height: 100%;
     background-image: url(); /* Du kanske vill lägga till en bild-URL här */
-    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
