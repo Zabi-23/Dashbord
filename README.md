@@ -29,5 +29,7 @@ Ingen installation krävs. Öppna bara `index.html` i din webbläsare.
 - **Förbättring av Användarupplevelsen:**
   - Målet är att förbättra användarupplevelsen genom att säkerställa att faviconerna visas korrekt och på ett enhetligt sätt när användaren interagerar med dashboardets länkar.
 
+  obbs användaren kan hämta engen nyckel för väder och background bilderna. 
+
 
 
